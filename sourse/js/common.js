@@ -248,4 +248,33 @@ $(function () {
 			PREV: "Назад",
 		},
 	});
+
+
+	// setTimeout(()=>{})
+	setTimeout(() => {
+		const swiper4 = new Swiper('.sCases__slider--js', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			observeParents: true,
+		});
+	}, 100);
+
+	$(document).on("mouseover", ".sCases__img-wrap", function () {
+		let bounds = this.getBoundingClientRect();
+		let viewWidth = document.documentElement.clientWidth;
+		let viewHeight = document.documentElement.clientHeight;
+		console.log(bounds['left']);
+		if (bounds['left'] < 300) {
+			document.querySelector(':root').style.setProperty('--pos-left', '-15px');
+		}
+		else {
+			document.querySelector(':root').style.setProperty('--pos-left', 'auto');
+
+		}
+
+	})
+
+	// $(".sCases__img-wrap").each(function () {
+	// 	this.addEventListener("click", () => console.log(111))
+	// })
 });

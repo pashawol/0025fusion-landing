@@ -5,7 +5,29 @@
 	// --sTPB: ;
 
 	&__modal {
-		display: none;
+		// display: none;
+		position: absolute;
+		right: -15px;
+		top: -15px;
+		left: var(--pos-left);
+		visibility: var(--show, 'hidden');
+		opacity: var(--show, 0);
+		z-index: 4;
+		// z-index: var(--show, -1);
+		transform: scale(var(--show, 0));
+		@include mt;
+		@include media-breakpoint-up(sm) {
+			width: 400px;
+		}
+		width: 300px;
+		padding: 30px;
+		background: #ffffff;
+		box-shadow: 0px 4px 82px rgba(0, 0, 0, 0.25);
+		border-radius: 8px;
+		transform-origin: top;
+	}
+	&__wrap {
+		overflow-x: auto;
 	}
 	&__cards {
 		position: relative;
@@ -14,10 +36,35 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 56px;
+
 		// border: 1px solid #000;
 	}
-
+	&__img-wrap {
+		background: #f5f5f5;
+		border-radius: 8px;
+		width: calc(100% + 2px);
+		height: calc(100% + 2px);
+		margin-left: -1px;
+		margin-top: -1px;
+		margin-right: -1px;
+		margin-bottom: -1px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 4;
+		text-align: center;
+		cursor: pointer;
+		border: 1px solid #f5f5f5;
+		&:hover {
+			border-color: $primary;
+		}
+	}
 	&__card {
+		&:hover {
+			--show: 1;
+			z-index: 5;
+		}
 		&::before,
 		&::after {
 			content: '';
@@ -30,7 +77,7 @@
 			transform: rotate(90deg);
 		}
 		img {
-			max-width: 100%;
+			max-width: 90%;
 			height: auto;
 		}
 		// top: -100px;
@@ -38,7 +85,7 @@
 		position: absolute;
 		width: var(--size, var(--size1));
 		height: var(--size, var(--size1));
-		border-radius: 8px;
+		border-radius: 9px;
 		border: 1px solid $primary;
 		// box-shadow: inset 0 0 1px 0 $primary;
 		// border: 1px solid #000;
@@ -339,5 +386,11 @@
 	@include media-breakpoint-only(xl) {
 	}
 	@include media-breakpoint-down(xl) {
+	}
+	.swiper {
+		overflow: visible;
+	}
+	.swiper-slide {
+		width: auto;
 	}
 } // end.sCases
