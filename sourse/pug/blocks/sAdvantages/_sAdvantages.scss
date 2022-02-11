@@ -83,6 +83,10 @@
 		&.phone {
 			@include block(424, 532);
 			max-width: 424px;
+			&::after {
+				width: 110%;
+				height: 110%;
+			}
 			.sAdvantages__shadow {
 				&::before,
 				&::after {
@@ -133,6 +137,11 @@
 			content: '';
 			background-image: var(--mokup);
 			@include a-cent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
 			background-size: contain;
 			background-repeat: no-repeat;
 			z-index: 2;
