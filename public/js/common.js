@@ -257,7 +257,7 @@ $(function () {
 			freeMode: true,
 			observeParents: true,
 		});
-	}, 100);
+	}, 10);
 
 	$(document).on("mouseover", ".sCases__img-wrap", function () {
 		let bounds = this.getBoundingClientRect();
