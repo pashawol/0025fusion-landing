@@ -26,6 +26,17 @@
 
 	//  --carousel-button-svg-stroke-width: 2.5;
 	//  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+
+	--size1: 63px;
+	--size2: 76px;
+	--size3: 89px;
+	--size4: 92px;
+	--size5: 107px;
+	--size6: 116px;
+	--size7: 134px;
+	--size8: 154px;
+	--size9: 123px;
+	--gutter: 15px;
 }
 
 @include media-breakpoint-up(xl) {

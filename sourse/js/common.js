@@ -226,4 +226,26 @@ $(function () {
 	});
 	// маска на инпут
 	$("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
+
+
+
+	const link = '[data-fancybox="modal"], .link-modal-js';
+	Fancybox.bind(link, {
+		arrows: false,
+		// infobar: false,
+		touch: false,
+		trapFocus: false,
+		placeFocusBack: false,
+		infinite: false,
+		dragToClose: false,
+		type: 'inline',
+		autoFocus: false,
+		groupAll: false,
+		groupAttr: false,
+		l10n: {
+			Escape: "Закрыть",
+			NEXT: "Вперед",
+			PREV: "Назад",
+		},
+	});
 });

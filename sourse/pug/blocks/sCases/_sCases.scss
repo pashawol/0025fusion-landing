@@ -1,14 +1,343 @@
 // start .sCases
 .sCases {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	&__modal {
+		display: none;
+	}
+	&__cards {
+		position: relative;
+		height: 530px;
+		width: 1316px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 56px;
+		// border: 1px solid #000;
+	}
+
+	&__card {
+		&::before,
+		&::after {
+			content: '';
+			width: 28px;
+			height: 1px;
+			background-color: $primary;
+			@include a-cent;
+		}
+		&::after {
+			transform: rotate(90deg);
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		// top: -100px;
+		// left: -100px;
+		position: absolute;
+		width: var(--size, var(--size1));
+		height: var(--size, var(--size1));
+		border-radius: 8px;
+		border: 1px solid $primary;
+		// box-shadow: inset 0 0 1px 0 $primary;
+		// border: 1px solid #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:nth-child(1) {
+			left: 0;
+			--size: var(--size4);
+			top: calc(
+				var(--size4) * 2 + var(--gutter) * 2 + var(--size6) - var(--size4)
+			);
+		}
+		&:nth-child(2) {
+			left: calc(var(--size4) + var(--gutter));
+			--size: var(--size5);
+			top: calc(
+				var(--size4) * 2 + var(--gutter) * 2 + var(--size6) - var(--size)
+			);
+		}
+
+		&:nth-child(3) {
+			--size: var(--size8);
+			left: calc(var(--size4) + var(--size5) + var(--gutter) * 2);
+			top: calc(
+				var(--size4) * 2 + var(--gutter) * 2 + var(--size6) - var(--size)
+			);
+		}
+
+		&:nth-child(4) {
+			--size: var(--size6);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 3
+			);
+			top: calc(
+				var(--size4) * 2 + var(--gutter) * 2 + var(--size6) - var(--size)
+			);
+		}
+
+		&:nth-child(5) {
+			--size: var(--size6);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 4 +
+					var(--size)
+			);
+			top: calc(
+				var(--size4) * 2 + var(--gutter) * 2 + var(--size6) - var(--size)
+			);
+		}
+
+		&:nth-child(6) {
+			--size: var(--size6);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 5 + 14px +
+					var(--size) * 2
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+
+		&:nth-child(7) {
+			--size: var(--size6);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 6 + 14px +
+					var(--size) * 3
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+
+		&:nth-child(8) {
+			--size: var(--size8);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 7 + 14px +
+					var(--size6) * 4
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+
+		&:nth-child(9) {
+			--size: var(--size8);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) + var(--gutter) * 7 + 14px +
+					var(--size6) * 4
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+		&:nth-child(10) {
+			--size: var(--size5);
+			left: calc(
+				var(--size4) + var(--size5) + var(--size8) * 2 + var(--gutter) * 8 +
+					14px + var(--size6) * 4
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+
+		&:nth-child(11) {
+			--size: var(--size4);
+			left: calc(
+				var(--size4) + var(--size5) * 2 + var(--size8) * 2 + var(--gutter) * 9 +
+					14px + var(--size6) * 4
+			);
+			top: calc(var(--size4) * 2 + var(--gutter));
+		}
+
+		&:nth-child(12) {
+			--size: var(--size1);
+			left: calc(var(--size1));
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(13) {
+			--size: var(--size3);
+			left: calc(var(--size1) * 2 + var(--gutter));
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(14) {
+			--size: var(--size9);
+			left: calc(var(--size1) * 2 + var(--size3) + var(--gutter) * 2);
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(15) {
+			--size: var(--size4);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 3
+			);
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(16) {
+			--size: var(--size2);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 3 +
+					var(--size4) - var(--size)
+			);
+			top: calc(
+				var(--size4) * 2 + var(--size6) + var(--gutter) * 4 + var(--size4)
+			);
+		}
+		&:nth-child(17) {
+			--size: var(--size8);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 4 +
+					var(--size4)
+			);
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(18) {
+			--size: var(--size4);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 5 +
+					var(--size4) + var(--size8)
+			);
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 2);
+		}
+
+		&:nth-child(19) {
+			--size: var(--size4);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 5 +
+					var(--size4) + var(--size8)
+			);
+			top: calc(
+				var(--size4) * 2 + var(--size6) + var(--gutter) * 3 + var(--size)
+			);
+		}
+		&:nth-child(20) {
+			--size: var(--size8);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 6 +
+					var(--size4) + var(--size8) + var(--size4)
+			);
+			top: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 2);
+		}
+
+		&:nth-child(21) {
+			--size: var(--size7);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 7 +
+					var(--size4) + var(--size8) + var(--size4) + var(--size8)
+			);
+			top: calc(var(--size4) * 2 + var(--size8) + var(--gutter) * 2);
+		}
+
+		&:nth-child(22) {
+			--size: var(--size2);
+			left: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 8 +
+					var(--size4) + var(--size8) * 3 + var(--size4)
+			);
+			top: calc(var(--size4) * 2 + var(--size5) + var(--gutter) * 2);
+		}
+		&:nth-child(23) {
+			--size: var(--size2);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 8 +
+					var(--size4) + var(--size8) * 3 + var(--size4)
+			);
+			bottom: calc(var(--size4) * 2 + var(--size5) + var(--gutter) * 2);
+		}
+
+		&:nth-child(24) {
+			--size: var(--size7);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 7 +
+					var(--size4) + var(--size8) + var(--size4) + var(--size8)
+			);
+			bottom: calc(var(--size4) * 2 + var(--size8) + var(--gutter) * 2);
+		}
+
+		&:nth-child(25) {
+			--size: var(--size8);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 6 +
+					var(--size4) + var(--size8) + var(--size4)
+			);
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 2);
+		}
+		&:nth-child(26) {
+			--size: var(--size4);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 5 +
+					var(--size4) + var(--size8)
+			);
+			bottom: calc(
+				var(--size4) * 2 + var(--size6) + var(--gutter) * 3 + var(--size)
+			);
+		}
+		&:nth-child(27) {
+			--size: var(--size4);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 5 +
+					var(--size4) + var(--size8)
+			);
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 2);
+		}
+		&:nth-child(28) {
+			--size: var(--size8);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 4 +
+					var(--size4)
+			);
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(29) {
+			--size: var(--size2);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 3 +
+					var(--size4) - var(--size)
+			);
+			bottom: calc(
+				var(--size4) * 2 + var(--size6) + var(--gutter) * 4 + var(--size4)
+			);
+		}
+		&:nth-child(30) {
+			--size: var(--size4);
+			right: calc(
+				var(--size1) * 2 + var(--size3) + var(--size9) + var(--gutter) * 3
+			);
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+		&:nth-child(31) {
+			--size: var(--size9);
+			right: calc(var(--size1) * 2 + var(--size3) + var(--gutter) * 2);
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+
+		&:nth-child(32) {
+			--size: var(--size3);
+			right: calc(var(--size1) * 2 + var(--gutter));
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+		&:nth-child(33) {
+			--size: var(--size1);
+			right: calc(var(--size1));
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+		&:nth-child(33) {
+			--size: var(--size1);
+			right: calc(var(--size1));
+			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sCases
