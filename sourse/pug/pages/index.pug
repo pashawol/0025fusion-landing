@@ -1,0 +1,24 @@
+extends ../layout/main.pug
+
+
+include ../blocks/sHelp/_sHelp.pug
+include ../blocks/sSets/_sSets.pug
+include ../blocks/sIntegration/_sIntegration.pug
+include ../blocks/sManagement/_sManagement.pug
+include ../blocks/sCases/_sCases.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= head.title
+	title= title
+block pagecontent
+	script(load="sEaseForUse")
+	script(load="sAdvantages")
+	script(load="sHelp")
+	script(load="sSets")
+	script(load="sIntegration")
+	script(load="sManagement")
+	script(load="sCases")

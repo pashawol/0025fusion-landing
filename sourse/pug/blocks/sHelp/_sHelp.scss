@@ -1,0 +1,37 @@
+// start .sHelp
+.sHelp {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	background: #eeeef2;
+	.section-title {
+	}
+	p {
+		letter-spacing: 0.02em;
+		color: #7d7d7d;
+		margin-bottom: 24px;
+	}
+	img {
+		margin-bottom: 32px;
+	}
+	.row {
+		--bs-gutter-y: 30px;
+		p {
+			max-width: 210px;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sHelp

@@ -1,0 +1,138 @@
+// start .sSets
+.sSets {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	background: #eeeef2;
+	.row {
+		--bs-gutter-y: 20px;
+	}
+	&__item {
+		background: #ffffff;
+		border-radius: 8px;
+		@include media-breakpoint-up(xl) {
+			--spx: 60px;
+		}
+
+		@include media-breakpoint-up(md) {
+			--spx: 30px;
+			--spB: 58px;
+		}
+
+		--spB: 30px;
+		--spx: 15px;
+		padding: 42px calc(var(--spx) + 1vw) var(--spB);
+		min-height: 100%;
+		letter-spacing: 0.02em;
+		display: flex;
+		flex-direction: column;
+		.row {
+			align-items: center;
+		}
+	}
+	&__head {
+		@include media-breakpoint-up(md) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-bottom: 23px;
+		}
+	}
+	&__img-wrap {
+		position: relative;
+	}
+	.gerb {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 0;
+	}
+	&__labels {
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(md) {
+			order: -1;
+		}
+		@include media-breakpoint-down(md) {
+			// margin-right: -30px;
+			display: flex;
+			justify-content: center;
+			@include roww(20px);
+		}
+	}
+	&__label {
+		text-align: center;
+		margin-bottom: 10px;
+		font-size: 17px;
+	}
+	&__label-title {
+		margin-top: -13px;
+		background: linear-gradient(135deg, #1dc4f4 0%, #05aef1 100%);
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #ffffff;
+		font-size: 30px;
+		font-weight: 900;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+
+	&__title {
+		@include media-breakpoint-up(md) {
+			font-size: 30px;
+		}
+		font-size: 20px;
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+	li {
+		margin-left: rem(20);
+		margin-bottom: 0.5em;
+		&::marker {
+			content: '• ';
+			color: $primary;
+		}
+	}
+	ul {
+		margin-bottom: 29px;
+		flex-grow: 1;
+	}
+	&__btn {
+		padding-left: 2rem;
+		padding-right: 2rem;
+		@include media-breakpoint-up(md) {
+			width: 170px;
+		}
+	}
+	&__price {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSets
+
+.col {
+	flex-grow: 1;
+	max-width: 100%;
+}

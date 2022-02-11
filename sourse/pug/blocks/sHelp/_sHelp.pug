@@ -1,0 +1,16 @@
+mixin sHelp(data)
+	// start sHelp
+	+b.SECTION.sHelp.section#sHelp&attributes(attributes)
+		.container
+			+b.section-title
+				p= sHelp.titlesub
+				h2= sHelp.title
+				
+			.row
+				each item, index in sHelp.items
+					+e.col.col-sm-3.col-xs-6
+						+e.item
+							+e.img-wrap
+								img(src=`img/svg/sHelp-${index + 1}.svg`, alt="")
+							p!= item.t
+	// end sHelp

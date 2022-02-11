@@ -1,0 +1,18 @@
+mixin sEaseForUse(data)
+	// start sEaseForUse
+	+b.SECTION.sEaseForUse.section#sEaseForUse&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2= sEaseForUse.title
+				
+			.row
+				each item, index in sEaseForUse.items
+					+e.col.col-md-4.col-sm-6
+						+e.item
+							+e.img-wrap
+								img(src=`img/svg/sEaseForUse-${index + 1}.svg`, alt="")
+							+e.title!= item.t
+							p!= item.p
+							+e.more(href="#") Узнать больше →
+
+	// end sEaseForUse

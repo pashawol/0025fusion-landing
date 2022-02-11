@@ -1,0 +1,19 @@
+mixin sIntegration(data)
+	// start sIntegration
+	+b.SECTION.sIntegration.section#sIntegration&attributes(attributes)
+		.container
+			+b.section-title
+				p= sIntegration.titlesub
+				h2= sIntegration.title
+				
+			.row
+				each item in sIntegration.items
+					+e.col.col-lg-3.col-sm-6
+						+e.item(href="#")
+							+e.img-wrap
+								+pic(`sIntegration-${item.img}.png`)
+							+e.title.text-primary!= item.t
+							p Отлично подойдет для автоматизации ресторана, бара, кафе, пиццерии, кальянной,  суши бара, пекарни, лапшичной...
+							+e.price.text-primary 12 500 ₽
+			+e.btn.btn-circle.btn.btn-primary(href="#") Посмотреть все дополнения
+	// end sIntegration

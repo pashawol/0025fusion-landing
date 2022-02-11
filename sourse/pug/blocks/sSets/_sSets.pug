@@ -1,0 +1,34 @@
+mixin sSets(data)
+	// start sSets
+	+b.SECTION.sSets.section#sSets&attributes(attributes)
+		.container
+			+b.section-title
+				h2= sSets.title
+				
+			.row
+				each item, index in sSets.items
+					+e.col.col-md-6.col-xs-12
+						+e.item
+							+e.head
+								+e.img-wrap
+									+pic("sSets-1.png")
+									+pic("gerb.png").gerb
+								+e.labels
+									+e.label
+										+e.label-text ФН
+										+e.label-title 36
+									+e.label
+										+e.label-text ОФН
+										+e.label-title 36
+								//- img(src=`img/svg/sSets-1.svg`, alt="")
+							+e.title!= item.t
+							ul
+								each li in item.list
+									li= li
+							.row
+								.col
+									+e.price!= item.price
+
+								.col-auto
+									+e.btn.btn-circle.btn.btn-primary(href="#") Заказать
+	// end sSets

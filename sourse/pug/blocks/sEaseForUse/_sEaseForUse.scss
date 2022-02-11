@@ -1,0 +1,64 @@
+// start .sEaseForUse
+.sEaseForUse {
+	// --sPT: ;
+	// --sPB: ;
+	// --sTPB: ;
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+	&__col {
+		float: none;
+		margin-bottom: 40px;
+	}
+	&__item {
+		border: 1px solid #c9c9c9;
+		border-radius: 8px;
+		position: relative;
+		min-height: 100%;
+		@include mt;
+		&:hover {
+			border-color: $primary;
+		}
+		padding: 47px 24px 26px;
+	}
+	&__img-wrap {
+		margin-bottom: rem(56);
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: bold;
+		max-width: 310px;
+		margin-bottom: rem(20);
+		min-height: 2.5em;
+		line-height: calc(29 / 24);
+	}
+	p {
+		margin-bottom: 1rem;
+	}
+	a {
+		&::before {
+			content: '';
+			@include a-cent;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sEaseForUse
