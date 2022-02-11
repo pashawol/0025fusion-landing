@@ -257,10 +257,11 @@ $(function () {
 		observeParents: true,
 	});
 
-	$(document).on("mouseover", ".sCases__img-wrap", function () {
+	$(document).on("mouseenter", ".sCases__img-wrap", function () {
 		let bounds = this.getBoundingClientRect();
 		let viewWidth = document.documentElement.clientWidth;
 		let viewHeight = document.documentElement.clientHeight;
+		// console.log();
 		console.log(bounds['left']);
 		if (bounds['left'] < 300) {
 			document.querySelector(':root').style.setProperty('--pos-left', '-15px');

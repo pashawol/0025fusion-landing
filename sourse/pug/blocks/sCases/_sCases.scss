@@ -5,7 +5,10 @@
 	// --sTPB: ;
 
 	&__modal {
-		// display: none;
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+		display: none;
 		position: absolute;
 		right: -15px;
 		top: -15px;
@@ -370,6 +373,23 @@
 			--size: var(--size1);
 			right: calc(var(--size1));
 			bottom: calc(var(--size4) * 2 + var(--size6) + var(--gutter) * 3);
+		}
+	}
+
+	&__btn {
+		// padding-left: 2rem;
+		// padding-right: 2rem;
+		margin-top: 40px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		display: block;
+		max-width: 286px;
+	}
+
+	.text-center {
+		p {
+			font-size: 20px;
 		}
 	}
 
