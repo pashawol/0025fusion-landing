@@ -250,14 +250,12 @@ $(function () {
 	});
 
 
-	// setTimeout(()=>{})
-	setTimeout(() => {
-		const swiper4 = new Swiper('.sCases__slider--js', {
-			slidesPerView: 'auto',
-			freeMode: true,
-			observeParents: true,
-		});
-	}, 10);
+
+	const swiper4 = new Swiper('.sCases__slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		observeParents: true,
+	});
 
 	$(document).on("mouseover", ".sCases__img-wrap", function () {
 		let bounds = this.getBoundingClientRect();
