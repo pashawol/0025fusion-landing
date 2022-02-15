@@ -3,7 +3,7 @@ mixin sAdvantages(data)
 	+b.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
 			each item, index in sAdvantages.items
-				+e.item
+				+e.item(id= item.id || null)
 					.row
 						.col-md-6.col-xs-12
 							if item.tabs

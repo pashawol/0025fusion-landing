@@ -13,6 +13,6 @@ mixin sEaseForUse(data)
 								img(src=`img/svg/sEaseForUse-${index + 1}.svg`, alt="")
 							+e.title!= item.t
 							p!= item.p
-							+e.more(href="#") Узнать больше →
+							+e.more(href=`#${item.link || ''}`).scroll-link Узнать больше →
 
 	// end sEaseForUse

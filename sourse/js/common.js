@@ -59,7 +59,9 @@ $(function () {
 
 
 	// листалка по стр
-	$(" .top-nav ul a.scroll-link").click(function () {
+	$(" .top-nav ul a.scroll-link, a.scroll-link").click(function () {
+		// e.preventDefault();
+		console.log(1);
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top - $(".top-nav").height();
 
