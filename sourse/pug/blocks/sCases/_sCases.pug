@@ -10,6 +10,7 @@ mixin sCases(data)
 						+e.cards
 							mixin f(modal)
 								+e.card
+									+e.bg
 									+e.img-wrap(href="#")
 										+pic("logo22.png")
 									+e.modal
@@ -22,6 +23,7 @@ mixin sCases(data)
 							- for (var x = 0; x < 16; x++)
 								+f(x)
 								+e.card
+									+e.bg
 							+f(18)
 			.text-center
 				p Начните автоматизацию своего бизнеса с FusionPOS бесплатно первые 14 дней!
