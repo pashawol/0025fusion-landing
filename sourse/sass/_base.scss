@@ -65,3 +65,15 @@ p {
 .col {
 	flex: 1 0 0%;
 }
+
+@include media-breakpoint-down(md) {
+
+}
+	
+	.top_line  .soc{
+		
+		justify-content: flex-end;
+	}
+	.top-nav__row{
+		justify-content: flex-end;
+	}
